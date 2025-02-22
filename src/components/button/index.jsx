@@ -1,10 +1,10 @@
 import { useTheme } from "../../contexts/themeContext";
 
 export const ChangeThemeButton=()=>{
-    const {theme, setTheme} = useTheme();
-
+    const {theme, changeTheme} = useTheme();
+    
     return(
-        <button onClick={setTheme}
+        <button onClick={changeTheme}
         style={{
             padding: "10px",
             fontSize: "16px",

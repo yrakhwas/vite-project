@@ -2,8 +2,9 @@ import { createContext, useState, useEffect, useContext } from "react";
 
 const ThemeContext = createContext(null);
 
-export const ThemeProvider = ({ children }) => {
+export  const ThemeProvider=({ children })=>{
     const [theme, setTheme] = useState(()=>{
+        console.log("setTheme work");
         return localStorage.getItem("theme") || "light";
     });
 
@@ -24,6 +25,7 @@ export const ThemeProvider = ({ children }) => {
     )
 };
 
-export const useTheme = ()=>{
+export const useTheme = () => {
+    console.log("Button clicked");
     return useContext(ThemeContext);
 }
